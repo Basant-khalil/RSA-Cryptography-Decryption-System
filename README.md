@@ -26,4 +26,3 @@ In the RSA decryption process, we will follow these key steps:
 Through the intricate integration of computational power, advanced cryptography algorithms, and precise LED control, our project aims to deliver an efficient and visually intuitive decryption system, providing users with a secure means to transmit and visualize confidential messages.
 
 
-The github page is at: 
