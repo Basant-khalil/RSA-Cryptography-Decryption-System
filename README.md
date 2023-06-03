@@ -7,21 +7,21 @@ Our technical approach involves utilizing a computer as the central processing u
 
 In the RSA decryption process, we will follow these key steps:
 
-Key Generation:
-a. Two large prime numbers, p and q, will be carefully chosen to ensure robust security.
-b. The modulus, n, will be calculated as the product of p and q: n = p * q.
-c. Two additional numbers, e and d, will be selected to satisfy the condition e * d ≡ 1 (mod (p-1)(q-1)).
+### Key Generation:
+1. Two large prime numbers, p and q, will be carefully chosen to ensure robust security.
+2. The modulus, n, will be calculated as the product of p and q: n = p * q.
+3. Two additional numbers, e and d, will be selected to satisfy the condition e * d ≡ 1 (mod (p-1)(q-1)).
 
-Encryption:
-a. The public key, consisting of n and e, will be made available for encryption purposes.
-b. The private key, comprising p, q, and d, will be strictly kept confidential.
-c. Upon receiving a plaintext message, denoted as m, the device will utilize the public key to calculate m^d mod n, resulting in the encrypted message.
+### Encryption:
+1. The public key, consisting of n and e, will be made available for encryption purposes.
+2. The private key, comprising p, q, and d, will be strictly kept confidential.
+3. Upon receiving a plaintext message, denoted as m, the device will utilize the public key to calculate m^d mod n, resulting in the encrypted message.
 
-LED-Based Decryption:
-a. The laptop interface will accept the user's desired plaintext input, imposing constraints of up to four words with a maximum word length of six characters.
-b. An intricate binary conversion algorithm will be employed to represent each character of the input text using precisely five bits.
-c. The decrypted output, denoted as 'a', will be calculated using the provided private key values of d and n.
-d. The resulting value 'a' will be accurately conveyed to the user by illuminating the appropriate LEDs, meticulously synchronized to represent the binary signal.
+### LED-Based Decryption:
+1. The laptop interface will accept the user's desired plaintext input, imposing constraints of up to four words with a maximum word length of six characters.
+2. An intricate binary conversion algorithm will be employed to represent each character of the input text using precisely five bits.
+3. The decrypted output, denoted as 'a', will be calculated using the provided private key values of d and n.
+4. The resulting value 'a' will be accurately conveyed to the user by illuminating the appropriate LEDs, meticulously synchronized to represent the binary signal.
 
 Through the intricate integration of computational power, advanced cryptography algorithms, and precise LED control, our project aims to deliver an efficient and visually intuitive decryption system, providing users with a secure means to transmit and visualize confidential messages.
 
