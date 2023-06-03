@@ -1,50 +1,29 @@
-## Your Project Answers
+## Project Idea:
 
-### Project Description
+LED-Based Decryption System: The objective of this project is to develop a sophisticated decryption system using Light Emitting Diodes (LEDs). Users will input a plaintext message via a laptop interface, which will be securely transmitted to the decryption device. The device will employ RSA cryptography to decrypt the message and then visually represent the resulting binary value using a set of precisely controlled LEDs.
 
-Project Idea:
+## Technical Approach:
+Our technical approach involves utilizing a computer as the central processing unit and integrating it with five high-intensity LEDs as external peripherals. The laptop interface will serve as the user's input gateway, enabling the entry of plaintext messages. Once received, the message will be securely transmitted to the decryption device for processing. The decrypted output will be displayed through the synchronized control of the connected LEDs, ensuring accurate visualization of the binary representation.
 
-decryption using leds: ask the user to input some text input through the laptop that would be connected to the laptop and then we decrypt that message and output the resulting value in binary using the LEDs to signal that. 
+In the RSA decryption process, we will follow these key steps:
 
-We would like to implement RSA cryptography to decrypt a plain text message provided by the user. We would then display the decrypted message in binary using five LEDs. The way we can do this is if we have the form 11000 and we use the blue led to represent the first digit and the green to represent the second then we just blink the blue and the green to signal they are ones. 
-### Technical Approach
+Key Generation:
+a. Two large prime numbers, p and q, will be carefully chosen to ensure robust security.
+b. The modulus, n, will be calculated as the product of p and q: n = p * q.
+c. Two additional numbers, e and d, will be selected to satisfy the condition e * d ≡ 1 (mod (p-1)(q-1)).
 
-Plan to use a computer and five LEDs as external peripherals. The computer will be used as a way to allow the user to enter a string of text that will be sent to the board to encrypt. Then the board, connected to the LEDs, will display the decrypted text.  
+Encryption:
+a. The public key, consisting of n and e, will be made available for encryption purposes.
+b. The private key, comprising p, q, and d, will be strictly kept confidential.
+c. Upon receiving a plaintext message, denoted as m, the device will utilize the public key to calculate m^d mod n, resulting in the encrypted message.
 
-In RSA, we will choose 2 prime numbers p and a and use them to calculate n=pq. Then we will pick 2 numbers e and d such that ed= 1 mod (p-1)(q-1)
+LED-Based Decryption:
+a. The laptop interface will accept the user's desired plaintext input, imposing constraints of up to four words with a maximum word length of six characters.
+b. An intricate binary conversion algorithm will be employed to represent each character of the input text using precisely five bits.
+c. The decrypted output, denoted as 'a', will be calculated using the provided private key values of d and n.
+d. The resulting value 'a' will be accurately conveyed to the user by illuminating the appropriate LEDs, meticulously synchronized to represent the binary signal.
 
-We will make public n and e and make p,q and d private. When we receive the message m, we will calculate m^d mod n to output a decrypted message. 
+Through the intricate integration of computational power, advanced cryptography algorithms, and precise LED control, our project aims to deliver an efficient and visually intuitive decryption system, providing users with a secure means to transmit and visualize confidential messages.
 
-The high level idea then is :
 
-* input the text you would like through the laptop where we will limit the maximum number of words to be 4 and each word has maximum length of 6 words 
-
-* Change the text inputted to its binary equivalent where we use 5 bits for every alphabet letter. For instance 00001 becomes a.
-
-* Calculate the output value a knowing d and n 
-
-* Output that value a through signaling the needed LEDs. 
-Plan to use a computer and five LEDs as external peripherals. The computer will be used as a way to allow the user to enter a string of text that will be sent to the board to encrypt. Then the board, connected to the LEDs, will display the decrypted text.  
-
-In RSA, we will choose 2 prime numbers p and a and use them to calculate n=pq. Then we will pick 2 numbers e and d such that ed= 1 mod (p-1)(q-1)
-
-We will make public n and e and make p,q and d private. When we receive the message m, we will calculate m^d mod n to output a decrypted message. 
-
-The high level idea then is :
-
-* input the text you would like through the laptop where we will limit the maximum number of words to be 4 and each word has maximum length of 6 words 
-
-* Change the text inputted to its binary equivalent where we use 5 bits for every alphabet letter. For instance 00001 becomes a.
-
-* Calculate the output value a knowing d and n 
-
-* Output that value a through signaling the needed LEDs. 
-
-## Feedback.
-
-Cool. The encryption aspect and keeping the private key on the baord is neat! I don't think the output LEDs should give you any trouble, but you could also use the LCD in a pinch. 
-
-## Welcome team! Please edit me.
-### You can use the 'main' branch for you code.
-### The GitHub web-page should be in the 'gh-pages' branch
-You can access the page adding a "pages" prefix to the url for the git repo e.g. if your browser currently shows https://github.coecis.cornell.edu/ece3140-sp22/bak94-gb438-sk2446 then the GitHub page is at https://pages.github.coecis.cornell.edu/ece3140-sp22/bak94-gb438-sk2446 . You can edit the source in the gh-pages branch or use the "automatic page generator" acessible via settings->options in the GitHub Pages Section toward the bottom. We recommend the latter approach since it is quick and easy. We made an initial wepage that you can edit and a description of the headings we expect to see.
+The github page is at: 
